@@ -1,1 +1,164 @@
-test
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		
+  		<!-- CSS -->
+		<link rel="stylesheet" href="./css/budgetv3.css" type="text/css">
+		<!--<link rel="stylesheet" href="./css/calendar.css" type="text/css">-->
+
+		<!-- JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="./js/budgetv3.js"></script>
+		<script type="text/javascript" src="./js/clickEvents.js"></script>
+		<!--<script type="text/javascript" src="./js/calendar.js"></script>-->
+		
+		<title>v3</title>
+	</head>
+	<body>
+		<div id="top-nav-cont">
+			<div id="top-nav-controls-cont">
+				<div class="top-nav-control-cont" onclick="showForm();">
+					<div class="top-nav-control"></div>
+				</div>
+				<div class="top-nav-control-cont">
+					<div class="top-nav-control"></div>
+				</div>
+				<div class="top-nav-control-cont">
+					<div class="top-nav-control"></div>
+				</div>
+				<div class="top-nav-control-cont">
+					<div class="top-nav-control"></div>
+				</div>
+			</div>
+			<div class="top-nav-search-cont">
+				<input type="text" class="top-nav-search-value" value="" placeholder="Search">
+				<div class="top-nav-search-submit">Submit</div>
+			</div>
+
+			<div id="top-nav-mobile-cont">
+				<div class="top-nav-control-cont" style="position: absolute; left: 0px;">
+					<div class="top-nav-control"></div>
+				</div>
+				<div class="top-nav-select-cont">
+					<div id="top-nav-select-accounts" class="top-nav-select-item">Accounts</div>
+					<div class="vert-line"></div>
+					<div id="top-nav-select-categories" class="top-nav-select-item">Categories</div>
+				</div>
+				<div class="top-nav-control-cont" style="position: absolute; right: 0px;">
+					<div class="top-nav-control"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="nav-hor-separator"></div> 
+
+
+		<div id="account-nav-cont" class="side-nav">
+			<div class="nav-heading">Heading</div>
+			<div class="table-heading-cont">
+				<div class="table-heading-left table-heading">Name</div>
+				<div class="table-heading-right table-heading">Other</div>
+			</div>
+			<div id="account-list" class="nav-list">
+				<div class="account">
+					<div class="select-border"></div>
+					<div class="side-nav-table-item side-nav-table-left">Test Name Long Name Long Name Long Name</div>
+					<div class="side-nav-table-item side-nav-table-right">$150.00</div>
+				</div>
+				<div class="account">
+					<div class="select-border"></div>
+					<div class="side-nav-table-item side-nav-table-left">Test Name</div>
+					<div class="side-nav-table-item side-nav-table-right">$150.00</div>
+				</div>
+				<div class="account">
+					<div class="select-border"></div>
+					<div class="side-nav-table-item side-nav-table-left">Test Name</div>
+					<div class="side-nav-table-item side-nav-table-right">$150.00</div>
+				</div>
+				<div class="account">
+					<div class="select-border"></div>
+					<div class="side-nav-table-item side-nav-table-left">Test Name</div>
+					<div class="side-nav-table-item side-nav-table-right">$150.00</div>
+				</div>	
+
+			</div>
+
+		</div>
+
+
+		<div id="category-nav-cont" class="side-nav">
+			<div class="nav-heading">Heading</div>
+			<div class="table-heading-cont">
+				<div class="table-heading-left table-heading">Name</div>
+				<div class="table-heading-left table-heading">Other</div>
+			</div>
+		</div>
+
+
+		<div id="expense-nav-cont">
+			<div id="expense-cont">
+				<div class="nav-heading">Heading</div>
+				<div class="table-heading-cont">
+					<div class="table-heading exp-table-delete">
+						<input type="checkbox">
+					</div>
+					<div class="table-heading exp-table-date">Date</div>
+					<div class="table-heading exp-table-desc">Description</div>
+					<div class="table-heading exp-table-cat">Category</div>
+					<div class="table-heading exp-table-amount">Amount</div>
+				</div>
+				<div id="expense-table-body">
+					<div> Testing</div>
+					<div> Testing</div>
+					<div> Testing</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div id="form-outer-cont">
+			<div id="form-overlay" onclick="hideForm();"></div>
+			<div id="form-cont">
+				<div id="form-heading-cont">
+					<div id="form-heading-text">Heading</div>
+					<div id="form-heading-close" onclick="hideForm();">x</div>
+				</div>
+
+				<div id="form-expense" class="form">
+					<div class="form-item">
+						<div class="form-item-name">Name</div>
+						<input type="text" class="form-item-input" inputType="description" value="Name">
+						<div class="form-item-reset">x</div>
+						<div class="form-item-error-cont">
+							<div class="form-item-error">Invalid Name</div>
+						</div>
+					</div>
+					<div class="form-item">
+						<div class="form-item-name">Name</div>
+						<input type="text" class="form-item-input" inputType="amount" value="Name">
+						<div class="form-item-reset">x</div>
+						<div class="form-item-error-cont">
+							<div class="form-item-error">
+								<div class="form-item-error">Invalid Name</div>
+							</div>
+						</div>
+					</div>
+
+				
+
+				</div>
+
+				<div class="form-buttons-cont">
+					<div class="form-button-cancel button">Cancel</div>
+					<div class="form-button-submit button">Submit</div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html>
